@@ -40,7 +40,7 @@ function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.license);  
   return `
        # ${data.title}
-        ${licenseBadge ? `[${licenseBadge}](${licenseLink})` : ''}
+        ${licenseBadge ? `[${licenseBadge}]${licenseLink}` : ''}
 
         ## Description
         ${data.description}
@@ -55,7 +55,6 @@ function generateMarkdown(data) {
 
         ## Installation
         ${data.installation}
-
 
         ## Usage
         ${data.usage}
