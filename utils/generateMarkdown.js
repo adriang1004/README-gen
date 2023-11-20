@@ -38,38 +38,38 @@ function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
   const licenseSection = renderLicenseSection(data.license);  
-  return `
-       # ${data.title}
-        ${licenseBadge ? `[${licenseBadge}]${licenseLink}` : ''}
+  return `# ${data.title}
 
-        ## Description
-        ${data.description}
+${licenseBadge ? `[${licenseBadge}]${licenseLink}` : ''}
 
-        ## Table of Contents
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Contributing](#contributing)
-        - [Tests](#tests)
-        - [License](#license)
-        - [Questions](#questions)
+## Description
+${data.description}
 
-        ## Installation
-        ${data.installation}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-        ## Usage
-        ${data.usage}
+## Installation
+${data.installation}
 
-        ## Contributing
-        ${data.contributing}
+## Usage
+${data.usage}
 
-        ## Tests
-        ${data.tests}
+## Contributing
+${data.contributing}
 
-        ## Questions
-        For any questions, please contact me at [${data.email}](mailto:${data.email}) or visit my GitHub profile: [${data.github}](https://github.com/${data.github}/)
-       
-        ## License
-        ${licenseSection}        
+## Tests
+${data.tests}
+
+## Questions
+For any questions, please contact me at [${data.email}](mailto:${data.email}) or visit my GitHub profile: [${data.github}](https://github.com/${data.github}/)
+
+## License
+${licenseSection}        
 `;
 }
 
